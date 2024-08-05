@@ -1,4 +1,4 @@
-# NTNU-EEND
+# EEND
 ## Citation
 In case of using the software please cite:\
 Federico Landini, Alicia Lozano-Diez, Mireia Diez, Lukáš Burget: [From Simulated Mixtures to Simulated Conversations as Training Data for End-to-End Neural Diarization](https://arxiv.org/abs/2204.00890)
