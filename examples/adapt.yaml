@@ -1,0 +1,41 @@
+# training options
+# KALDI_ROOT=/share/nas165/pennylee/kaldi_asr/kaldi python eend/train.py -c examples/adapt.yaml
+init_model_path: /share/nas165/pennylee/BUT_former/EEND/result/simulate_100000_small_2spk+branchformer/models
+init_epochs: 90-100
+attractor_loss_ratio: 1.0
+attractor_encoder_dropout: 0.1
+attractor_decoder_dropout: 0.1
+context_size: 7
+detach_attractor_loss: False
+dev_batchsize: 128
+encoder_units: 2048
+feature_dim: 23
+frame_shift: 80
+frame_size: 200
+use_last_samples: True
+gpus: 1
+gradclip: 5
+hidden_size: 256
+input_transform: logmel_meannorm
+log_report_batches_num: 100
+max_epochs: 100
+use_former: Branchformer # Transformer
+model_type: TransformerEDA
+num_frames: 500
+num_speakers: 3 #2
+num_workers: 1
+optimizer: adam
+lr: 1e-5
+output_path: result/small_simulate_100000_2spk_adapt_callhome_3spk
+sampling_rate: 8000
+seed: 3 #3
+subsampling: 10
+time_shuffle: True
+train_batchsize: 64 # 32
+transformer_encoder_dropout: 0.1
+transformer_encoder_n_heads: 4
+transformer_encoder_n_layers: 4
+train_data_dir: /share/nas165/pennylee/EEND/egs/callhome/v1/data/eval/callhome1_spkall
+valid_data_dir: /share/nas165/pennylee/EEND/egs/callhome/v1/data/eval/callhome2_spkall
+kr_vad_loss_weight: 0
+kr_vad_loss_begin_epoch: 100

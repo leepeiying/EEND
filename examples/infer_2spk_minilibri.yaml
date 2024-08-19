@@ -1,0 +1,29 @@
+# training options
+# KALDI_ROOT=/share/nas165/pennylee/kaldi_asr/kaldi python eend/infer.py -c examples/infer_2spk_minilibri.yaml
+add_encoder_mask: True
+context_size: 7
+encoder_units: 2048
+epochs: 190-200
+estimate_spk_qty: 2
+estimate_spk_qty_thr: -1
+feature_dim: 23
+frame_shift: 80
+frame_size: 200
+gpus: 0
+hidden_size: 256
+infer_data_dir: /share/nas165/pennylee/espnet/egs2/mini_librispeech/diar1/data/simu/data/dev_clean_2_ns2_beta2_500
+input_transform: logmel_meannorm
+median_window_length: 11
+use_former: Transformer # Transformer
+model_type: TransformerEDA
+models_path: /share/nas165/pennylee/BUT_former/EEND/result/baseline_redo/models/models
+num_frames: -1
+rttms_dir: /share/nas165/pennylee/BUT_former/EEND/output/baseline_redo
+sampling_rate: 8000
+seed: 3 # 3
+subsampling: 10
+time_shuffle: True
+threshold: 0.5
+transformer_encoder_dropout: 0.1
+transformer_encoder_n_heads: 4
+transformer_encoder_n_layers: 4
